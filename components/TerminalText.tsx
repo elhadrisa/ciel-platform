@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-export default function TerminalText({ text }) {
+export default function TerminalText({ text }: { text: string }) {
   const [displayText, setDisplayText] = useState("")
 
   useEffect(() => {
