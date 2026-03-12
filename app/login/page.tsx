@@ -1,12 +1,32 @@
 "use client"
 
+import { supabase } from "../../lib/supabaseclient"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
-import TerminalText from "@/components/TerminalText"
+import TerminalText from "../../components/TerminalText"
+
 
 export default function LoginPage() {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+
+  const router = useRouter()
+
+    async function handleLogin() {
+
+  const { error } = await supabase.auth.signInWithPassword({
+    email: email,
+    password: password,
+  })
+
+  if (error) {
+    alert("Erreur de connexion")
+  } else {
+    router.push("/dashboard")
+  }
+
+}
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-black text-green-400">
@@ -40,9 +60,12 @@ export default function LoginPage() {
           onChange={(e)=>setPassword(e.target.value)}
         />
 
-        <button className="w-full border border-green-400 py-2 hover:bg-green-400 hover:text-black transition">
-          se connecter
-        </button>
+        <button
+onClick={handleLogin}
+className="w-full border border-green-400 py-2 hover:bg-green-400 hover:text-black transition"
+>
+se connecter
+</button>
 
       </div>
 
