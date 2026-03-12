@@ -25,6 +25,9 @@ CIEL Portal
         >
           Connexion
         </a>
+        <a href="/login">
+Connexion
+</a>
 
         <a
           href="/forum"
