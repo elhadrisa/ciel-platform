@@ -25,10 +25,6 @@ CIEL Portal
         >
           Connexion
         </a>
-        <a href="/login">
-Connexion
-</a>
-
         <a
           href="/forum"
           className="border border-cyan-400 px-6 py-3 hover:bg-cyan-400 hover:text-black transition"
