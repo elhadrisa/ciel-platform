@@ -1,6 +1,21 @@
 "use client"
 
+import { useEffect, useState } from "react"
+
 export default function Navbar() {
+
+  const [avatar, setAvatar] = useState("")
+  const [name, setName] = useState("Élève")
+
+  useEffect(() => {
+
+    const savedAvatar = localStorage.getItem("avatar")
+
+    if(savedAvatar){
+      setAvatar(savedAvatar)
+    }
+
+  }, [])
 
   return (
 
@@ -10,23 +25,25 @@ export default function Navbar() {
         CIEL Portal
       </h1>
 
-      <div className="flex gap-6">
+      <div className="flex items-center gap-8">
 
-        <a href="/dashboard" className="hover:text-white">
-          Dashboard
-        </a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/forum">Forum</a>
+        <a href="/calendar">Calendrier</a>
+        <a href="/profile">Profil</a>
 
-        <a href="/forum" className="hover:text-white">
-          Forum
-        </a>
+        <div className="flex items-center gap-3">
 
-        <a href="/calendar" className="hover:text-white">
-          Calendrier
-        </a>
+          <span>{name}</span>
 
-        <a href="/profile" className="hover:text-white">
-  Profil
-</a>
+          {avatar && (
+            <img
+              src={avatar}
+              className="w-10 h-10 rounded-full border border-green-400"
+            />
+          )}
+
+        </div>
 
       </div>
 

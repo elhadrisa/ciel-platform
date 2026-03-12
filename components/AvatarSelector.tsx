@@ -14,6 +14,14 @@ export default function AvatarSelector() {
 
   const [selected, setSelected] = useState("")
 
+  function chooseAvatar(avatar:string){
+
+    setSelected(avatar)
+
+    localStorage.setItem("avatar", avatar)
+
+  }
+
   return (
 
     <div className="grid grid-cols-3 gap-4">
@@ -24,7 +32,7 @@ export default function AvatarSelector() {
           key={avatar}
           src={avatar}
           className={`w-20 h-20 cursor-pointer border ${selected === avatar ? "border-green-400" : "border-gray-600"}`}
-          onClick={()=>setSelected(avatar)}
+          onClick={()=>chooseAvatar(avatar)}
         />
 
       ))}
