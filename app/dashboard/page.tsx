@@ -1,6 +1,9 @@
 "use client"
 
 import Navbar from "../../components/Navbar"
+import TerminalAnimation from "../../components/TerminalAnimation"
+import NetworkAnimation from "../../components/NetworkAnimation"
+import ElectricAnimation from "../../components/ElectricAnimation"
 
 export default function Dashboard() {
 

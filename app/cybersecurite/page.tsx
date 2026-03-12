@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar"
 import CourseCard from "../../components/CourseCard"
+import TerminalAnimation from "../../components/TerminalAnimation"
 
 export default function Cyber() {
 
@@ -19,21 +20,25 @@ export default function Cyber() {
           Ici vous trouverez les cours et travaux pratiques de cybersécurité.
         </p>
 
+        <div className="mt-6 border border-green-400 p-4">
+          <TerminalAnimation/>
+        </div>
+
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mt-10">
 
-<CourseCard
-title="Intro à la sécurité des réseaux (1ère CIEL)"
-pdf="/cours/Cours 6 - Introduction à la Cybersécurité.pdf"
-/>
+        <CourseCard
+          title="Intro à la sécurité des réseaux (1ère CIEL)"
+          pdf="/cours/Cours 6 - Introduction à la Cybersécurité.pdf"
+        />
 
-<CourseCard
-title="Sécurité des réseaux (Terminale CIEL)"
-pdf="/cours/Cours 6 - La sécurité Informatique.pdf"
-/>
+        <CourseCard
+          title="Sécurité des réseaux (Terminale CIEL)"
+          pdf="/cours/Cours 6 - La sécurité Informatique.pdf"
+        />
 
-</div>
+      </div>
 
     </main>
 

@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar"
 import TPCard from "../../components/TPCard"
+import NetworkAnimation from "../../components/NetworkAnimation"
 
 export default function Reseau() {
 
@@ -19,15 +20,20 @@ export default function Reseau() {
           Ici vous trouverez les cours et TP sur les réseaux informatiques.
         </p>
 
+        <div className="mt-6 border border-cyan-400 p-4">
+          <NetworkAnimation/>
+        </div>
+
       </div>
+
       <div className="grid md:grid-cols-2 gap-8 mt-10">
 
-<TPCard
-title="TP VLAN"
-pdf="/tp/TP1 - VLAN.pdf"
-/>
+        <TPCard
+          title="TP VLAN"
+          pdf="/tp/TP1 - VLAN.pdf"
+        />
 
-</div>
+      </div>
 
     </main>
 

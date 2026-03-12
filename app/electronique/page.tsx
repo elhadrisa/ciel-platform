@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar"
+import ElectricAnimation from "../../components/ElectricAnimation"
 
 export default function Electronique() {
 
@@ -17,6 +18,10 @@ export default function Electronique() {
         <p>
           Ici vous trouverez les cours et TP sur l’électronique.
         </p>
+
+        <div className="mt-6 border border-pink-400 p-4">
+          <ElectricAnimation/>
+        </div>
 
       </div>
 
