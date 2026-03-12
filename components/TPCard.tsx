@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 
-export default function TPCard({ title, pdf }) {
+export default function TPCard({ title, pdf }: { title: string, pdf: string }) {
 
-  const [file, setFile] = useState(null)
+  const [file, setFile] = useState<File | null>(null)
 
   function handleSubmit() {
 
@@ -13,7 +13,7 @@ export default function TPCard({ title, pdf }) {
       return
     }
 
-    alert("TP envoyé (simulation pour l'instant)")
+    alert("TP envoyé (simulation)")
   }
 
   return (
@@ -40,7 +40,7 @@ export default function TPCard({ title, pdf }) {
 
         <input
           type="file"
-          onChange={(e)=>setFile(e.target.files[0])}
+          onChange={(e)=>setFile(e.target.files?.[0] || null)}
         />
 
         <button
