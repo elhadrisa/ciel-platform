@@ -4,9 +4,7 @@ export default function CourseCard({ title, pdf }) {
   return (
 
     <div className="border border-green-400 p-6 hover:bg-green-400 hover:text-black transition">
-<div className="h-24 mb-4 flex items-center justify-center border border-green-400">
-  <NetworkAnimation />
-</div>
+<div className="h-24 mb-4 border border-green-400"></div>
 
       <h2 className="text-xl mb-3 neon-text">
         {title}

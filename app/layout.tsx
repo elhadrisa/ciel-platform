@@ -31,6 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en">
      <body className={orbitron.className}>
+
+      <div className="network-background">
+
+  <div className="packet-bg"></div>
+  <div className="packet-bg" style={{animationDelay:"2s"}}></div>
+  <div className="packet-bg" style={{animationDelay:"4s"}}></div>
+  <div className="packet-bg" style={{animationDelay:"6s"}}></div>
+
+</div>
         {children}
       </body>
     </html>
