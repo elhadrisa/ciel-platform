@@ -193,7 +193,7 @@ body {
 
 .terminal-background{
 
-  position:absolute;
+  position: fixed;
 
   top:0;
   left:0;
@@ -207,10 +207,14 @@ body {
 
   font-size:14px;
 
-  opacity:0.08;
+  opacity:0.06;
 
   padding:20px;
 
   pointer-events:none;
+
+  z-index:-1;
+
+  overflow:hidden;
 
 }

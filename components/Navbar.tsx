@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
 
-    <div className="w-full flex justify-between items-center p-4 border-b border-green-400 bg-black">
+    <div className="w-full flex justify-between items-center p-4 border-b border-green-400 bg-black relative z-10">
 
       <h1 className="text-green-400 text-xl neon-text">
         CIEL Portal
