@@ -24,13 +24,13 @@ export default function Cyber() {
       <div className="grid md:grid-cols-2 gap-8 mt-10">
 
 <CourseCard
-title="Introduction cybersécurité"
-pdf="/cours/cyber-intro.pdf"
+title="Intro à la sécurité des réseaux (1ère CIEL)"
+pdf="/cours/Cours 6 - Introduction à la Cybersécurité.pdf"
 />
 
 <CourseCard
-title="Sécurité des mots de passe"
-pdf="/cours/password.pdf"
+title="Sécurité des réseaux (Terminale CIEL)"
+pdf="/cours/Cours 6 - La sécurité Informatique.pdf"
 />
 
 </div>
