@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar"
+import CourseCard from "../../components/CourseCard"
 
 export default function Cyber() {
 
@@ -19,6 +20,20 @@ export default function Cyber() {
         </p>
 
       </div>
+
+      <div className="grid md:grid-cols-2 gap-8 mt-10">
+
+<CourseCard
+title="Introduction cybersécurité"
+pdf="/cours/cyber-intro.pdf"
+/>
+
+<CourseCard
+title="Sécurité des mots de passe"
+pdf="/cours/password.pdf"
+/>
+
+</div>
 
     </main>
 
