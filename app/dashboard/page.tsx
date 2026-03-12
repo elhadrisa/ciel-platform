@@ -1,42 +1,56 @@
 "use client"
 
-import TerminalText from "../../components/TerminalText"
+import Navbar from "../../components/Navbar"
 
 export default function Dashboard() {
 
   return (
 
-    <main className="min-h-screen bg-black text-green-400 flex flex-col items-center justify-center">
+    <main className="min-h-screen bg-black text-green-400">
 
       <div className="cyber-grid"></div>
 
-      <div className="text-center mb-16 space-y-2">
-        <TerminalText text="> connexion serveur CIEL..." />
-        <TerminalText text="> authentification réussie" />
-        <TerminalText text="> Bonjour élève" />
-      </div>
+      <Navbar />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-3/4">
+      <div className="p-10 max-w-4xl mx-auto">
 
-        <a href="/themes/cybersecurite" className="border border-green-400 p-8 text-center hover:bg-green-400 hover:text-black transition">
-          Cybersécurité
-        </a>
+        <h1 className="text-3xl mb-10 neon-text">
+          Bienvenue en 2nde CIEL
+        </h1>
 
-        <a href="/themes/reseau" className="border border-cyan-400 p-8 text-center hover:bg-cyan-400 hover:text-black transition">
-          Réseau informatique
-        </a>
+        <div className="space-y-10">
 
-        <a href="/themes/electronique" className="border border-pink-400 p-8 text-center hover:bg-pink-400 hover:text-black transition">
-          Electronique
-        </a>
+          <a href="/cybersecurite">
+            <div className="border border-green-400 p-6 hover:bg-green-400 hover:text-black transition cursor-pointer">
+              <h2 className="text-xl mb-2 neon-text">Cybersécurité</h2>
+              <p>
+                Accédez aux cours et travaux pratiques sur la cybersécurité :
+                vulnérabilités, sécurité réseau, cryptographie et bonnes pratiques.
+              </p>
+            </div>
+          </a>
 
-        <a href="/forum" className="border border-yellow-400 p-8 text-center hover:bg-yellow-400 hover:text-black transition">
-          Forum
-        </a>
+          <a href="/reseau">
+            <div className="border border-cyan-400 p-6 hover:bg-cyan-400 hover:text-black transition cursor-pointer">
+              <h2 className="text-xl mb-2 neon-text">Réseau informatique</h2>
+              <p>
+                Retrouvez les cours et TP sur les réseaux : TCP/IP,
+                configuration des équipements réseau et analyse de trafic.
+              </p>
+            </div>
+          </a>
 
-        <a href="/calendar" className="border border-purple-400 p-8 text-center hover:bg-purple-400 hover:text-black transition">
-          Calendrier
-        </a>
+          <a href="/electronique">
+            <div className="border border-pink-400 p-6 hover:bg-pink-400 hover:text-black transition cursor-pointer">
+              <h2 className="text-xl mb-2 neon-text">Electronique</h2>
+              <p>
+                Consultez les cours et TP sur l’électronique,
+                les composants et les systèmes embarqués.
+              </p>
+            </div>
+          </a>
+
+        </div>
 
       </div>
 
