@@ -1,14 +1,21 @@
+import TerminalText from "@/components/TerminalText"
 export default function Home() {
+  <div className="cyber-grid"></div>
   return (
+    
     <main className="min-h-screen bg-black text-green-400 flex flex-col items-center justify-center">
 
-      <h1 className="text-5xl mb-6 font-bold">
-        CIEL Portal
-      </h1>
-
+     
+      <h1 className="text-5xl neon-text">
+CIEL Portal
+</h1>
+      <TerminalText text="> connexion au serveur CIEL..." />
+      <TerminalText text="> authentification..." />
+      <TerminalText text="> accès autorisé" />
       <p className="mb-10 text-lg">
         Plateforme pédagogique CIEL
       </p>
+
 
       <div className="flex gap-6">
 
