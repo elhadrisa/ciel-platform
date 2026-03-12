@@ -1,6 +1,7 @@
 import Navbar from "../../components/Navbar"
 import TPCard from "../../components/TPCard"
 import NetworkAnimation from "../../components/NetworkAnimation"
+import BackgroundTerminal from "../../components/BackgroundTerminal"
 
 export default function Reseau() {
 
@@ -10,6 +11,7 @@ export default function Reseau() {
 
   <div className="cyber-grid-network"></div>
   <div className="absolute inset-0 bg-black -z-10"></div>
+  <BackgroundTerminal />
 
   <Navbar />
 
