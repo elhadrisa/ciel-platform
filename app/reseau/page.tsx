@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar"
+import TPCard from "../../components/TPCard"
 
 export default function Reseau() {
 
@@ -19,6 +20,14 @@ export default function Reseau() {
         </p>
 
       </div>
+      <div className="grid md:grid-cols-2 gap-8 mt-10">
+
+<TPCard
+title="TP VLAN"
+pdf="/tp/TP1 - VLAN.pdf"
+/>
+
+</div>
 
     </main>
 
