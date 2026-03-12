@@ -1,6 +1,5 @@
 import Navbar from "../../components/Navbar"
 import CourseCard from "../../components/CourseCard"
-import TerminalAnimation from "../../components/TerminalAnimation"
 
 export default function Cyber() {
 
@@ -19,10 +18,6 @@ export default function Cyber() {
         <p>
           Ici vous trouverez les cours et travaux pratiques de cybersécurité.
         </p>
-
-        <div className="mt-6 border border-green-400 p-4">
-          <TerminalAnimation/>
-        </div>
 
       </div>
 

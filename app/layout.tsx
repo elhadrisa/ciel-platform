@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Orbitron } from 'next/font/google'
 import './globals.css'
+import TerminalAnimation from "../components/TerminalAnimation"
 
 const orbitron = Orbitron({
   subsets: ['latin'],
@@ -32,6 +33,10 @@ export default function RootLayout({
     <html lang="en">
      <body className={orbitron.className}>
 
+      <div className="background-terminal">
+  <TerminalAnimation/>
+</div>
+
       <div className="network-background">
 
   <div className="packet-bg"></div>
@@ -40,6 +45,7 @@ export default function RootLayout({
   <div className="packet-bg" style={{animationDelay:"6s"}}></div>
 
 </div>
+
         {children}
       </body>
     </html>
