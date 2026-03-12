@@ -1,24 +1,38 @@
 "use client"
 
 import { useState } from "react"
+import { supabase } from "../lib/supabaseclient"
 
 export default function TPCard({ title, pdf }: { title: string, pdf: string }) {
 
   const [file, setFile] = useState<File | null>(null)
 
-  function handleSubmit() {
+  async function handleSubmit() {
 
     if (!file) {
       alert("Sélectionnez un fichier")
       return
     }
 
-    alert("TP envoyé (simulation)")
+    const fileName = Date.now() + "_" + file.name
+
+    const { error } = await supabase
+      .storage
+      .from("rendus")
+      .upload(fileName, file)
+
+    if (error) {
+      alert("Erreur upload")
+      console.log(error)
+    } else {
+      alert("TP envoyé avec succès")
+    }
+
   }
 
   return (
 
-    <div className="border border-cyan-400 p-6 hover:bg-cyan-400 hover:text-black transition">
+    <div className="border border-cyan-400 p-6">
 
       <div className="h-24 mb-4 flex items-center justify-center border border-cyan-400">
         animation réseau
