@@ -24,6 +24,10 @@ export default function Navbar() {
           Calendrier
         </a>
 
+        <a href="/profile" className="hover:text-white">
+  Profil
+</a>
+
       </div>
 
     </div>
