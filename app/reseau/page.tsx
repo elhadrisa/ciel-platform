@@ -7,6 +7,7 @@ export default function Reseau() {
   return (
 
     <main className="min-h-screen bg-black text-green-400">
+      <div className="cyber-grid-network"></div>
 
       <Navbar />
 
