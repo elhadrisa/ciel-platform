@@ -6,10 +6,12 @@ export default function Reseau() {
 
   return (
 
-    <main className="min-h-screen bg-black text-green-400">
-      <div className="cyber-grid-network"></div>
+      <main className="min-h-screen text-green-400 relative">
 
-      <Navbar />
+  <div className="cyber-grid-network"></div>
+  <div className="absolute inset-0 bg-black -z-10"></div>
+
+  <Navbar />
 
       <div className="p-10">
 
