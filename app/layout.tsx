@@ -8,7 +8,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
     <html lang="fr">
 
-      <body>
+      <body className="cyber-body">
 
         <BackgroundTerminal />
 
@@ -19,5 +19,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
 
   )
-
 }
