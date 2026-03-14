@@ -1,6 +1,4 @@
-@import "@fontsource/orbitron";
-
-/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap");
 
 *{
   margin:0;
@@ -8,30 +6,12 @@
   box-sizing:border-box;
 }
 
-/* BODY */
-
 body{
 
-  background:black;
+  background:#050505;
+  color:#00ffc3;
 
-  font-family:"Orbitron", monospace;
-
-  color:#00ff9c;
-
-}
-
-/* CONTAINER */
-
-.app-container{
-
-  position:relative;
-  z-index:2;
-
-  max-width:1200px;
-
-  margin:auto;
-
-  padding:20px;
+  font-family:"Orbitron", sans-serif;
 
 }
 
@@ -40,40 +20,66 @@ body{
 .navbar{
 
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
 
-  padding:15px 0;
+  padding:20px 40px;
 
   border-bottom:1px solid #00ffc3;
+
+  background:#050505;
+
+}
+
+.logo{
+
+  font-size:28px;
+
+  font-weight:600;
+
+  text-shadow:0 0 10px #00ffc3;
 
 }
 
 /* MENU */
 
-.menu{
+.nav-links{
 
   display:flex;
 
-  gap:30px;
+  gap:40px;
 
 }
 
-.menu a{
-
-  color:#00ffc3;
+.nav-links a{
 
   text-decoration:none;
 
+  color:#00ffc3;
+
+  font-size:16px;
+
+  transition:0.2s;
+
 }
 
-.menu a:hover{
+.nav-links a:hover{
 
-  text-shadow:
-  0 0 5px #00ffc3,
-  0 0 10px #00ffc3;
+  color:white;
+
+  text-shadow:0 0 8px #00ffc3;
+
+}
+
+/* PAGE */
+
+.page{
+
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:40px;
 
 }
 
@@ -81,91 +87,80 @@ body{
 
 h1{
 
-  font-size:40px;
+  font-size:42px;
 
   margin-bottom:20px;
 
   text-shadow:
-  0 0 5px #00ffc3,
-  0 0 10px #00ffc3,
+  0 0 8px #00ffc3,
   0 0 20px #00ffc3;
+
+}
+
+p{
+
+  margin-bottom:30px;
 
 }
 
 /* CARTES */
 
-.card{
-
-  border:1px solid #00ffc3;
-
-  padding:20px;
-
-  margin-top:20px;
-
-  background:rgba(0,0,0,0.6);
-
-}
-
-/* GRID */
-
-.grid{
+.cards{
 
   display:grid;
 
   grid-template-columns:1fr 1fr;
 
-  gap:20px;
+  gap:30px;
 
 }
 
-/* TERMINAL BACKGROUND */
+.card{
 
-.terminal-background{
+  border:1px solid #00ffc3;
 
-  position:fixed;
+  padding:30px;
 
-  top:0;
-  left:0;
+  border-radius:8px;
 
-  width:100%;
-  height:100%;
+  background:rgba(0,0,0,0.6);
 
-  padding:20px;
-
-  font-family:monospace;
-
-  color:#00ff9c;
-
-  font-size:14px;
-
-  opacity:0.05;
-
-  pointer-events:none;
-
-  z-index:0;
+  transition:0.2s;
 
 }
 
-/* CYBER GRID */
+.card:hover{
 
-.cyber-grid-network{
+  box-shadow:0 0 20px #00ffc3;
 
-  position:fixed;
+}
 
-  top:0;
-  left:0;
+.card h2{
 
-  width:100%;
-  height:100%;
+  margin-bottom:15px;
 
-  background-image:
-    linear-gradient(rgba(0,255,200,0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,200,0.15) 1px, transparent 1px);
+}
 
-  background-size:40px 40px;
+.button{
 
-  pointer-events:none;
+  display:inline-block;
 
-  z-index:-1;
+  margin-top:10px;
+
+  padding:10px 20px;
+
+  border:1px solid #00ffc3;
+
+  text-decoration:none;
+
+  color:#00ffc3;
+
+}
+
+.button:hover{
+
+  background:#00ffc3;
+
+  color:black;
 
 }

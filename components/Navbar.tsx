@@ -4,9 +4,11 @@ export default function Navbar(){
 
     <div className="navbar">
 
-      <h2>CIEL Portal</h2>
+      <div className="logo">
+        CIEL Portal
+      </div>
 
-      <div className="menu">
+      <div className="nav-links">
 
         <a href="/dashboard">Dashboard</a>
         <a href="/forum">Forum</a>

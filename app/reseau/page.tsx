@@ -1,38 +1,42 @@
 import Navbar from "../../components/Navbar"
-import TPCard from "../../components/TPCard"
 
-export default function Reseau() {
+export default function Reseau(){
 
-  return (
+  return(
 
-    <main className="min-h-screen text-green-400 relative">
+    <>
+      <Navbar/>
 
-      <div className="cyber-grid-network"></div>
+      <div className="page">
 
-      <Navbar />
-
-      <div className="p-10">
-
-        <h1 className="text-3xl neon-text mb-6">
-          Réseau informatique
-        </h1>
+        <h1>Réseau informatique</h1>
 
         <p>
           Ici vous trouverez les cours et TP sur les réseaux informatiques.
         </p>
 
+        <div className="cards">
+
+          <div className="card">
+
+            <h2>TP VLAN</h2>
+
+            <p>
+              Configuration des VLAN sur un switch.
+            </p>
+
+            <a className="button" href="/tp/TP1 - VLAN.pdf">
+              Télécharger le TP
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 mt-10">
-
-        <TPCard
-          title="TP VLAN"
-          pdf="/tp/TP1 - VLAN.pdf"
-        />
-
-      </div>
-
-    </main>
+    </>
 
   )
+
 }
