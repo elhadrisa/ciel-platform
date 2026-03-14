@@ -12,7 +12,9 @@ export default function BackgroundTerminal(){
     "> checking vulnerabilities...",
     "> exploit loaded",
     "> access granted",
-    "> monitoring packets..."
+    "> monitoring packets...",
+    "> scanning subnet...",
+    "> host detected"
   ]
 
   const [display,setDisplay] = useState<string[]>([])
@@ -21,11 +23,11 @@ export default function BackgroundTerminal(){
 
     const interval = setInterval(()=>{
 
-      setDisplay(prev => {
+      setDisplay((prev:string[]) => {
 
         const next = [...prev, lines[Math.floor(Math.random()*lines.length)]]
 
-        if(next.length > 12){
+        if(next.length > 15){
           next.shift()
         }
 

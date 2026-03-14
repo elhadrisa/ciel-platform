@@ -1,19 +1,15 @@
 import Navbar from "../../components/Navbar"
 import TPCard from "../../components/TPCard"
-import NetworkAnimation from "../../components/NetworkAnimation"
-import BackgroundTerminal from "../../components/BackgroundTerminal"
 
 export default function Reseau() {
 
   return (
 
-      <main className="min-h-screen text-green-400 relative">
+    <main className="min-h-screen text-green-400 relative">
 
-  <div className="cyber-grid-network"></div>
-  <div className="absolute inset-0 bg-black -z-10"></div>
-  <BackgroundTerminal />
+      <div className="cyber-grid-network"></div>
 
-  <Navbar />
+      <Navbar />
 
       <div className="p-10">
 
@@ -24,10 +20,6 @@ export default function Reseau() {
         <p>
           Ici vous trouverez les cours et TP sur les réseaux informatiques.
         </p>
-
-        <div className="mt-6 border border-cyan-400 p-4">
-          <NetworkAnimation/>
-        </div>
 
       </div>
 

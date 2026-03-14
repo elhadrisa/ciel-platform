@@ -1,205 +1,16 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  background: #0b0b0b;
-  color: #00ff9c;
-}
-
-.cyber-grid {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(#00ff9c22 1px, transparent 1px),
-    linear-gradient(90deg, #00ff9c22 1px, transparent 1px);
-  background-size: 40px 40px;
-  animation: gridMove 10s linear infinite;
-  z-index: -1;
-}
-
-@keyframes gridMove {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(40px);
-  }
-}
-
-.neon-text {
-  color: #00ff9c;
-  text-shadow:
-    0 0 5px #00ff9c,
-    0 0 10px #00ff9c,
-    0 0 20px #00ff9c,
-    0 0 40px #00ff9c;
-}
-
-.packet{
-
-  position:absolute;
-  width:10px;
-  height:10px;
-  background:#00ffff;
-  border-radius:50%;
-
-  animation:movePacket 3s linear infinite;
-}
-
-.delay{
-  animation-delay:1s;
-}
-
-.delay2{
-  animation-delay:2s;
-}
-
-@keyframes movePacket{
-
-  0%{ left:0; top:50% }
-
-  50%{ left:50%; top:20% }
-
-  100%{ left:100%; top:50% }
-
-}
-
-.electric-line{
-
-  width:100%;
-  height:3px;
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    #ff00ff,
-    #00ffff,
-    transparent
-  );
-
-  animation:electric 1s linear infinite;
-}
-
-@keyframes electric{
-
-  0%{ background-position:0% }
-
-  100%{ background-position:200% }
-
-}
-
-.network-background {
-
-  position: fixed;
-  top:0;
-  left:0;
-
-  width:100%;
-  height:100%;
-
-  pointer-events:none;
-  z-index:-1;
-
-}
-
-.packet-bg{
-
-  position:absolute;
-  width:6px;
-  height:6px;
-
-  background:#00ffff;
-  border-radius:50%;
-
-  opacity:0.4;
-
-  animation:movePacketBG 8s linear infinite;
-
-}
-
-@keyframes movePacketBG{
-
-  0%{
-    transform:translate(0,0)
-  }
-
-  50%{
-    transform:translate(50vw,30vh)
-  }
-
-  100%{
-    transform:translate(100vw,0)
-  }
-
-}
-
-.cyber-grid-network {
-
-  position: absolute;
-  top:0;
-  left:0;
-
-  width:100%;
-  height:100%;
-
-  background-image:
-    linear-gradient(rgba(0,255,200,0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,200,0.3) 1px, transparent 1px);
-
-  background-size:40px 40px;
-
-  pointer-events:none;
-
-}
-
-@keyframes gridMove{
-
-  from{
-    transform:translateY(0);
-  }
-
-  to{
-    transform:translateY(40px);
-  }
-
-}
+/* terminal hacker background */
 
 .terminal-background{
 
-  position: fixed;
+  position:fixed;
 
   top:0;
   left:0;
 
   width:100%;
   height:100%;
+
+  padding:20px;
 
   font-family:monospace;
 
@@ -207,14 +18,36 @@ body {
 
   font-size:14px;
 
-  opacity:0.06;
-
-  padding:20px;
+  opacity:0.05;
 
   pointer-events:none;
 
   z-index:-1;
 
   overflow:hidden;
+
+}
+
+/* grille cyberpunk */
+
+.cyber-grid-network{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background-image:
+    linear-gradient(rgba(0,255,200,0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,200,0.2) 1px, transparent 1px);
+
+  background-size:40px 40px;
+
+  pointer-events:none;
+
+  z-index:-2;
 
 }
