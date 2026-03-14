@@ -5,18 +5,16 @@ import { ReactNode } from "react"
 export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
-
     <html lang="fr">
-
-      <body className="cyber-body">
+      <body>
 
         <BackgroundTerminal />
 
-        {children}
+        <div className="app-container">
+          {children}
+        </div>
 
       </body>
-
     </html>
-
   )
 }

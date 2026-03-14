@@ -10,7 +10,7 @@
 
 /* BODY */
 
-.cyber-body{
+body{
 
   background:black;
 
@@ -20,37 +20,18 @@
 
 }
 
-/* TITRES */
+/* CONTAINER */
 
-h1,h2,h3{
+.app-container{
 
-  color:#00ffc3;
+  position:relative;
+  z-index:2;
 
-  text-shadow:
-  0 0 5px #00ffc3,
-  0 0 10px #00ffc3,
-  0 0 20px #00ffc3;
+  max-width:1200px;
 
-}
+  margin:auto;
 
-/* TEXTE */
-
-p{
-  color:#00ff9c;
-}
-
-/* LIENS */
-
-a{
-  color:#00ffc3;
-  text-decoration:none;
-}
-
-a:hover{
-
-  text-shadow:
-  0 0 5px #00ffc3,
-  0 0 10px #00ffc3;
+  padding:20px;
 
 }
 
@@ -64,9 +45,76 @@ a:hover{
 
   align-items:center;
 
-  padding:20px;
+  padding:15px 0;
 
   border-bottom:1px solid #00ffc3;
+
+}
+
+/* MENU */
+
+.menu{
+
+  display:flex;
+
+  gap:30px;
+
+}
+
+.menu a{
+
+  color:#00ffc3;
+
+  text-decoration:none;
+
+}
+
+.menu a:hover{
+
+  text-shadow:
+  0 0 5px #00ffc3,
+  0 0 10px #00ffc3;
+
+}
+
+/* TITRES */
+
+h1{
+
+  font-size:40px;
+
+  margin-bottom:20px;
+
+  text-shadow:
+  0 0 5px #00ffc3,
+  0 0 10px #00ffc3,
+  0 0 20px #00ffc3;
+
+}
+
+/* CARTES */
+
+.card{
+
+  border:1px solid #00ffc3;
+
+  padding:20px;
+
+  margin-top:20px;
+
+  background:rgba(0,0,0,0.6);
+
+}
+
+/* GRID */
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:20px;
 
 }
 
@@ -94,11 +142,11 @@ a:hover{
 
   pointer-events:none;
 
-  z-index:-1;
+  z-index:0;
 
 }
 
-/* GRILLE CYBERPUNK */
+/* CYBER GRID */
 
 .cyber-grid-network{
 
@@ -118,6 +166,6 @@ a:hover{
 
   pointer-events:none;
 
-  z-index:-2;
+  z-index:-1;
 
 }
